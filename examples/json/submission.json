@@ -1,0 +1,48 @@
+{
+   "year": "2014",
+   "source": [
+      {
+         "id": "1A3b",
+         "name": "Road Transport",
+         "substance": {
+            "id": "CO2",
+            "name": "Carbon dioxide",
+            "unit": "kg",
+            "emission": [
+               {
+                  "year": "2010",
+                  "value": "123.8"
+               },
+               {
+                  "year": "2011",
+                  "value": "121.1"
+               }
+            ]
+         }
+      },
+      {
+         "id": "2H1",
+         "name": "Pulp and Paper",
+         "substance": [
+            {
+               "id": "NOx",
+               "name": "Nitric Oxides",
+               "unit": "t",
+               "emission": {
+                  "year": "1990",
+                  "value": "3.8"
+               }
+            },
+            {
+               "id": "SO2",
+               "name": "Sulphur Oxides",
+               "unit": "kt",
+               "emission": {
+                  "year": "2011",
+                  "value": "21.1"
+               }
+            }
+         ]
+      }
+   ]
+}

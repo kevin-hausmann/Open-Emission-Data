@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns="https://www.umweltbundesamt.de/2017/emissionen"
+    targetNamespace="https://www.umweltbundesamt.de/2017/emissionen"
+    attributeFormDefault="unqualified"
+    elementFormDefault="qualified">
+    
+  <!-- This is needed for the use of xml:lang in label -->
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd" />
+  
+  <xs:element name="label">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute ref="xml:lang"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="emission">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:float">
+          <xs:attribute type="xs:gYear" name="year" use="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="substance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="label" maxOccurs="unbounded" minOccurs="0"/>
+        <xs:element ref="emission" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute type="xs:token" name="id" use="required"/>
+      <xs:attribute type="xs:token" name="unit" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="source">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="label" maxOccurs="unbounded" minOccurs="0"/>
+        <xs:element ref="substance" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute type="xs:token" name="id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="submission">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="source" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute type="xs:gYear" name="year" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
