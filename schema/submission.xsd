@@ -18,10 +18,40 @@
     </xs:complexType>
   </xs:element>
   
+  <xs:simpleType name="value">
+    <xs:union>
+      <xs:simpleType>
+        <!-- Disallow zero (0.0) as a value, notation key should be used instead -->
+        <xs:union>
+          <xs:simpleType >
+            <xs:restriction base="xs:decimal">
+              <xs:maxExclusive value="0"/>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:decimal">
+              <xs:minExclusive value="0"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:union>
+      </xs:simpleType>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="NE"/>
+          <xs:enumeration value="NA"/>
+          <xs:enumeration value="NO"/>
+          <xs:enumeration value="IE"/>
+          <xs:enumeration value="C"/>
+          <xs:enumeration value="NR"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  
   <xs:element name="emission">
     <xs:complexType>
       <xs:simpleContent>
-        <xs:extension base="xs:float">
+        <xs:extension base="value">
           <xs:attribute type="xs:gYear" name="year" use="required"/>
         </xs:extension>
       </xs:simpleContent>
