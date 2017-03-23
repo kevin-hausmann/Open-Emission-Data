@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <submission year="2014" xmlns="https://www.umweltbundesamt.de/2017/emissionen">
-	<source id="1A3b">
-        <label xml:lang="en">Road Transport</label>
-        <label xml:lang="de">Straßenverkehr</label>
-		<substance id="CO2" unit="kg">
-            <label xml:lang="en">Carbon dioxide</label>
-            <label xml:lang="de">Kohlendioxid</label>
-			<emission year="2010">123.8</emission>
-			<emission year="2011">121.1</emission>
-		</substance>
-	</source>
-	<source id="2H1">
-        <label xml:lang="en">Pulp and Paper</label>
-        <label xml:lang="de">Papierherstellung</label>
-		<substance id="NOx" unit="t">
-            <label xml:lang="en">Nitric Oxides</label>
-            <label xml:lang="de">Stickoxide</label>
-			<emission year="1990">3.8</emission>
-		</substance>
-		<substance id="SO2" unit="kt">
-            <label xml:lang="en">Sulphur Oxides</label>
-            <label xml:lang="de">Schwefeloxide</label>
-			<emission year="2011">21.1</emission>
-		</substance>
-	</source>
+  <source id="1A3b">
+    <label xml:lang="en">Road Transport</label>
+    <label xml:lang="de">Straßenverkehr</label>
+    <substance id="CO2" unit="kg">
+        <label xml:lang="en">Carbon dioxide</label>
+        <label xml:lang="de">Kohlendioxid</label>
+        <emission year="2010">123.8</emission>
+        <emission year="2011">121.1</emission>
+    </substance>
+  </source>
+  <source id="2H1">
+    <label xml:lang="en">Pulp and Paper</label>
+    <label xml:lang="de">Papierherstellung</label>
+    <substance id="NOx" unit="t">
+      <label xml:lang="en">Nitric Oxides</label>
+      <label xml:lang="de">Stickoxide</label>
+      <emission year="1990">3.8</emission>
+    </substance>
+    <substance id="SO2" unit="kt">
+      <label xml:lang="en">Sulphur Oxides</label>
+      <label xml:lang="de">Schwefeloxide</label>
+      <emission year="2011">21.1</emission>
+    </substance>
+  </source>
 </submission>
